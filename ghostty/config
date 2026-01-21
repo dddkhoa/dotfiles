@@ -1,0 +1,19 @@
+# Ghostty Configuration
+# Configured to match Starship prompt style with Nerd Font icons
+
+# Font Configuration
+# Use a Nerd Font for proper icon rendering
+font-family = MesloLGS NF
+font-size = 14
+
+# Theme
+# Run `ghostty +list-themes` to see all available themes
+
+# Window
+window-padding-x = 8
+window-padding-y = 8
+
+# Shell Integration
+# Auto-detect shell for integration features
+shell-integration = detect
+shell-integration-features = cursor,sudo,title

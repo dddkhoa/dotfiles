@@ -1,0 +1,28 @@
+model = "gpt-5.2-codex"
+model_reasoning_effort = "xhigh"
+tool_output_token_limit = 25000
+# Leave room for native compaction near the 272-273k context window.
+# Formula: 273000 - (tool_output_token_limit + 15000)
+# With tool_output_token_limit=25000 => 273000 - (25000 + 15000) = 233000
+model_auto_compact_token_limit = 233000
+
+[features]
+ghost_commit = false
+unified_exec = true
+apply_patch_freeform = true
+web_search_request = true
+skills = true
+shell_snapshot = true
+steer = true
+
+# Project trust levels are machine-specific and should be configured locally
+# Example:
+# [projects."/path/to/project"]
+# trust_level = "trusted"
+
+[notice]
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+hide_rate_limit_model_nudge = true
+
+[notice.model_migrations]
+"gpt-5.2" = "gpt-5.2-codex"
